@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>个人简历</title>
+    <!-- 引入Font Awesome图标 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: '微软雅黑', sans-serif;
+            margin: 2rem;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        caption {
+            font-size: 24px;
+            font-weight: bold;
+            padding: 1rem;
+            background-color: #f5f5f5;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            vertical-align: top;
+        }
+        .icon {
+            margin-right: 8px;
+            color: #2c3e50;
+        }
+        .photo-cell {
+            width: 120px;
+            text-align: center;
+        }
+        .photo {
+            width: 100px;
+            height: 130px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+        .section-title {
+            background-color: #f8f9fa;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>个人简历</caption>
+        
+        <!-- 基本信息 -->
+        <tr>
+            <th colspan="6" class="section-title">
+                <i class="fas fa-user icon"></i>基本信息
+            </th>
+        </tr>
+        <tr>
+            <td><i class="fas fa-signature icon"></i>姓名</td>
+            <td>徐浩文</td>
+            <td><i class="fas fa-venus-mars icon"></i>性别</td>
+            <td>男</td>
+            <td><i class="fas fa-birthday-cake icon"></i>年龄</td>
+            <td>19</td>
+			
+        </tr>
+        <tr>
+            <td><i class="fas fa-home icon"></i>籍贯</td>
+            <td>山东济宁</td>
+            <td><i class="fas fa-phone icon"></i>联系电话</td>
+            <td colspan="3">18354790828</td>
+        </tr>
+        <tr>
+            <td><i class="fas fa-envelope icon"></i>电子邮箱</td>
+            <td colspan="3">2838141904@qq.com</td>
+			
+			<td rowspan="3" class="photo-cell">
+			    <img src="3.jpg" class="photo" alt="个人照片">
+            </td>
+        </tr>
+        
+        <!-- 其他信息 -->
+        <tr>
+            <td><i class="fas fa-graduation-cap icon"></i>学历</td>
+            <td>大学本科</td>
+            <td><i class="fas fa-heartbeat icon"></i>健康状况</td>
+            <td>良好</td>
+        </tr>
+        <tr>
+            <td><i class="fas fa-ring icon"></i>婚姻状况</td>
+            <td colspan="3">未婚</td>
+        </tr>
+        
+        <!-- 求职意向 -->
+        <tr>
+            <td><i class="fas fa-graduation-cap icon"></i>求职意向</td>
+            <td>软件工程师</td>
+            <td><i class="fas fa-graduation-cap icon"></i>专业</td>
+            <td>软件工程</td>
+        
+            <td><i class="fas fa-graduation-cap icon"></i>毕业院校</td>
+            <td colspan="3">鲁东大学</td>
+        </tr>
+        
+        <!-- 技能证书 -->
+        <tr>
+            <th colspan="6" class="section-title">
+                <i class="fas fa-certificate icon"></i>技能证书
+            </th>
+			
+        </tr>
+        <tr>
+        <td colspan="6">
+            <ul>
+                <li>英语四级</li>
+                <li>教师资格证</li>
+        		<li>机动车驾驶证</li>
+            </ul>
+        </td>    
+        </tr>
+        
+        <!-- 技能证书 -->
+        <tr>
+            <th colspan="6" class="section-title">
+                <i class="fas fa-certificate icon"></i>个人特长与爱好
+            </th>
+        </tr>
+        <tr>
+            <td colspan="6">
+                <ul>
+                    <li>运动</li>
+                    <li>美食</li>
+					<li>游戏</li>
+                </ul>
+            </td>
+        </tr>
+        
+        <!-- 项目经历 -->
+        <tr>
+            <th colspan="6" class="section-title">
+                <i class="fas fa-project-diagram icon"></i>项目经历
+            </th>
+        </tr>
+        <tr>
+            <td colspan="6">
+                <p><strong>智能推荐系统开发（2020-2022）</strong></p >
+                <p>项目描述：带领5人团队开发基于深度学习的电商推荐系统...</p >
+            </td>
+        </tr>
+        
+        <!-- 自我评价 -->
+        <tr>
+            <th colspan="6" class="section-title">
+                <i class="fas fa-comment-dots icon"></i>自我评价
+            </th>
+        </tr>
+        <tr>
+            <td colspan="6">
+                <!-- 此处需要用户自行填写200字以上内容 -->
+                <p>作为一名拥有5年经验的软件工程师......（此处省略200+字内容）</p >
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
