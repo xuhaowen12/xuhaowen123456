@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        /* 基础样式重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* 页面容器 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* 标题与分割线 */
+        .page-title {
+            text-align: center;
+            padding: 30px 0;
+            color: #333;
+        }
+        hr {
+            border: 0;
+            height: 2px;
+            background: #e0e0e0;
+            margin-bottom: 40px;
+        }
+
+        /* 主体内容布局 */
+        .content-wrapper {
+            display: flex;
+            gap: 40px;
+        }
+
+        /* 左侧新闻区域 */
+        .left-column {
+            flex: 3;
+        }
+        .news-article {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+        }
+        .news-article h4 {
+            color: #1a73e8;
+            margin-bottom: 15px;
+        }
+        .image-group {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        .news-image {
+            width: 48%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+        .author-info {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        /* 右侧推荐区域 */
+        .right-column {
+            flex: 1;
+        }
+        .hot-news-item {
+            margin-bottom: 25px;
+            transition: transform 0.3s;
+        }
+        .hot-news-item:hover {
+            transform: translateX(5px);
+        }
+        .hot-link {
+            text-decoration: none;
+            color: #202124;
+        }
+        .hot-link h4 {
+            margin-bottom: 10px;
+        }
+        .hot-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="page-title">每日新闻快讯</h1>
+        <hr>
+        
+        <div class="content-wrapper">
+            <!-- 左侧新闻 -->
+            <div class="left-column">
+                <div class="news-article">
+                    <h4>人工智能技术取得重大突破</h4>
+                    <div class="image-group">
+                        <img src="ai.jpg" class="news-image" alt="新闻图片">
+                        <img src="ai2.jpg" class="news-image" alt="新闻图片">
+                    </div>
+                    <p class="author-info">记者：王晓明 | 发布时间：2023-09-20</p>
+                </div>
+
+                <div class="news-article">
+                    <h4>全球气候变化峰会召开</h4>
+                    <div class="image-group">
+                        <img src="qihou.jpg" class="news-image" alt="新闻图片">
+                        <img src="qihou2.jpg" class="news-image" alt="新闻图片">
+                    </div>
+                    <p class="author-info">记者：李芳 | 发布时间：2023-09-20</p>
+                </div>
+
+                <div class="news-article">
+                    <h4>新型疫苗研发进展顺利</h4>
+                    <div class="image-group">
+                        <img src="yimiao.jpg" class="news-image" alt="新闻图片">
+                        <img src="yimiao2.jpg" class="news-image" alt="新闻图片">
+                    </div>
+                    <p class="author-info">记者：陈涛 | 发布时间：2023-09-20</p>
+                </div>
+            </div>
+
+<!-- 右侧推荐 -->
+<div class="right-column">
+    <div class="hot-news-item">
+        <a href="https://cn.bing.com/search?q=%E4%BB%8A%E6%97%A5%E5%8D%81%E5%A4%A7%E7%83%AD%E9%97%A8%E8%AF%9D%E9%A2%98&form=ANNTH1&refig=67fc92358aa94e8abcb0253c7cb4676e&pc=NMTS&adppc=EdgeStart&pqlth=0&assgl=8&sgcn=%E4%BB%8A%E6%97%A5%E5%8D%81%E5%A4%A7%E7%83%AD%E9%97%A8%E8%AF%9D%E9%A2%98&qs=HS&sgtpv=HS&smvpcn=0&swbcn=10&sctcn=0&sc=10-0&sp=2&ghc=0&cvid=67fc92358aa94e8abcb0253c7cb4676e&clckatsg=1&hsmssg=0" class="hot-link" target="_blank" rel="noopener noreferrer">
+            <h4>今日十大热门话题 →</h4>
+            <img src="remen.jpg" class="hot-image" alt="热文推荐">
+        </a>
+    </div>
+
+    <div class="hot-news-item">
+        <a href="https://cn.bing.com/search?q=%E8%B4%A2%E7%BB%8F%E9%A2%86%E5%9F%9F%E6%9C%80%E6%96%B0%E5%8A%A8%E6%80%81&qs=n&form=QBRE&sp=-1&lq=0&pq=%E8%B4%A2%E7%BB%8F%E9%A2%86%E5%9F%9F%E6%9C%80%E6%96%B0%E5%8A%A8%E6%80%81&sc=9-8&sk=&cvid=E1EBE10AAA0E4930ABC479E698640583" class="hot-link">  <!-- 相对路径示例 -->
+            <h4> 财经领域最新动态→</h4>
+            <img src="caijing.jpg" class="hot-image" alt="热文推荐">
+        </a>
+    </div>
+
+    <div class="hot-news-item">
+        <a href="https://cn.bing.com/search?q=%E7%A7%91%E6%8A%80%E4%BA%A7%E5%93%81%E6%B7%B1%E5%BA%A6%E8%AF%84%E6%B5%8B&form=ANNTH1&refig=67fc928c0718444097de3e430ae2b8eb&pc=NMTS&adppc=EdgeStart" class="hot-link">  <!-- 锚点链接示例 -->
+            <h4>科技产品深度评测 →</h4>
+            <img src="keji.jpg" class="hot-image" alt="热文推荐">
+        </a>
+    </div>
+</div>
