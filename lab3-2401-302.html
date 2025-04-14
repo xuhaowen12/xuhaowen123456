@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>个人简历</title>
+    <style>
+        body {
+            font-family: '微软雅黑', sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        fieldset {
+            border: 2px solid #4CAF50;
+            border-radius: 8px;
+            margin: 20px 0;
+            padding: 20px;
+            background-color: white;
+        }
+
+        legend {
+            color: #4CAF50;
+            font-size: 1.2em;
+            padding: 0 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+        }
+
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            color: #333;
+        }
+
+        td {
+            padding: 12px;
+            vertical-align: top;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+
+        input[type="number"] {
+            max-width: 80px;
+        }
+
+        input[type="checkbox"] {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        .button-group {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>基本信息</legend>
+            <table>
+                <caption>个人简历</caption>
+                <tr>
+                    <td>姓名：<input type="text" maxlength="20" required></td>
+                    <td>性别：<select required>
+                        <option value="">请选择</option>
+                        <option>男</option>
+                        <option>女</option>
+                    </select></td>
+                    <td>年龄：<input type="number" min="18" max="60" required></td>
+                </tr>
+                <tr>
+                    <td>籍贯：<input type="text" maxlength="50"></td>
+                    <td>电话：<input type="tel" pattern="[0-9]{11}" required></td>
+                    <td>邮箱：<input type="email" required></td>
+                </tr>
+                <tr>
+                    <td>学历：<select required>
+                        <option value="">请选择</option>
+                        <option>大专</option>
+                        <option>本科</option>
+                        <option>硕士</option>
+                    </select></td>
+                    <td>健康状况：<select>
+                        <option>良好</option>
+                        <option>一般</option>
+                    </select></td>
+                    <td>婚姻状况：<select>
+                        <option>未婚</option>
+                        <option>已婚</option>
+                    </select></td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <fieldset>
+            <legend>求职信息</legend>
+            <table>
+                <tr>
+                                    <td width="30%">求职意向：<select required>
+                                        <option value="">请选择</option>
+                                        <option>前端开发</option>
+                                        <option>软件工程师</option>
+                                    </select></td>
+                                    <td width="40%">专业：<select required>
+                                        <option value="">请选择</option>
+                                        <option>软件工程</option>
+                                        <option>计算机科学与技术</option>
+                						<option>人工智能</option>
+                						</select></td>
+                                    <td width="30%">毕业院校：<select required>
+                                        <option value="">请选择</option>
+                                        <option>信息与电气工程</option>
+                                        <option>人工智能</option>
+                                    </select></td>
+                                </tr>
+                <tr>
+                    <td colspan="3">技能证书：
+                        <label><input type="checkbox"> 英语四级</label>
+                        <label><input type="checkbox"> 计算机二级</label>
+                        <label><input type="checkbox"> 驾照</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">个人特长：
+                        <label><input type="checkbox"> 篮球</label>
+                        <label><input type="checkbox"> 绘画</label>
+                        <label><input type="checkbox"> 音乐</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">项目经历：<textarea rows="4" maxlength="500"></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="3">自我评价：<textarea rows="4" maxlength="500"></textarea></td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <div class="button-group">
+            <button type="submit">提交</button>
+            <button type="reset">重置</button>
+        </div>
+    </form>
+</body>
+</html>
