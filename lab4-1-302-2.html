@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { margin: 0; padding: 20px; }
+        .title { text-align: center; }
+        hr { margin: 20px 0; }
+        .content {
+            display: flex;
+            gap: 20px;
+        }
+        .left { flex: 2; }
+        .right { flex: 1; }
+        .news-item {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        .news-item img {
+            width: 200px;
+            margin: 10px;
+        }
+        .author { color: #666; }
+        .hot-news {
+            margin-bottom: 15px;
+        }
+        .hot-news a {
+            text-decoration: none;
+            color: #333;
+        }
+        .hot-news img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">新闻资讯</h1>
+    <hr>
+    <div class="content">
+        <div class="left">
+            <div class="news-item">
+                <h4>新闻标题1</h4>
+                <img src="1.jpg">
+                <img src="2.jpg">
+                <p class="author">作者：徐浩文</p>
+            </div>
+            <!-- 重复其他两篇新闻 -->
+        </div>
+        <div class="right">
+            <div class="hot-news">
+                <a href="#">
+                    <h4>热文推荐1</h4>
+                    <img src="3.jpg">
+                </a>
+            </div>
+            <!-- 重复其他两篇热文 -->
+        </div>
+    </div>
+</body>
+</html>

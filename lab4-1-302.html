@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .container {
+            position: relative;
+            width: 600px;
+            height: 400px;
+            margin: 20px auto;
+        }
+        .center-icon {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background: url('icon.png') no-repeat center;
+            background-size: cover;
+            margin: 150px auto;
+            z-index: 1;
+        }
+        .point {
+            position: absolute;
+            width: 200px;
+            padding: 10px;
+            background: #f0f0f0;
+            border-radius: 8px;
+            list-style: none;
+        }
+        .point1 { top: 20px; left: 50px; }
+        .point2 { top: 20px; right: 50px; }
+        .point3 { bottom: 20px; left: 50%; transform: translateX(-50%); }
+        ul { padding-left: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="center-icon"></div>
+        <div class="point point1">
+            <ul>
+                <li>知识点1</li>
+                <li>知识点2</li>
+            </ul>
+        </div>
+        <div class="point point2">
+            <ul>
+                <li>知识点3</li>
+                <li>知识点4</li>
+            </ul>
+        </div>
+        <div class="point point3">
+            <ul>
+                <li>知识点5</li>
+                <li>知识点6</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
