@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人简历</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <style>
+        /* 通用样式 */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.5;
+        }
+
+        /* 容器样式 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* 卡片样式 */
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        /* 标题样式 */
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        h2:hover {
+            transform: rotate(5deg);
+        }
+
+        /* 输入框和选择框样式 */
+        input[type="text"],
+        input[type="number"],
+        input[type="tel"],
+        input[type="email"],
+        input[type="file"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 0.25rem;
+            margin-bottom: 1rem;
+            transition: border-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        input[type="text"]:focus,
+        input[type="number"]:focus,
+        input[type="tel"]:focus,
+        input[type="email"]:focus,
+        input[type="file"]:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #4299e1;
+            outline: none;
+            transform: scale(1.02);
+        }
+
+        /* 复选框和标签样式 */
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+
+        label {
+            display: inline-block;
+            margin-bottom: 0.5rem;
+        }
+
+        /* 按钮样式 */
+        button {
+            padding: 0.75rem 1.5rem;
+            background-color: #4299e1;
+            color: #fff;
+            border: none;
+            border-radius: 0.25rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #3182ce;
+            transform: scale(1.05);
+        }
+
+        /* 图标样式 */
+        .icon {
+            margin-right: 0.5rem;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .icon:hover {
+            transform: rotate(360deg);
+        }
+
+        /* 照片样式 */
+        .photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+        }
+
+        .photo:hover {
+            transform: scale(1.1);
+            filter: brightness(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-3xl font-bold text-center mb-8">个人简历</h1>
+        <!-- 基本信息 -->
+        <div class="card">
+            <h2><i class="fa-solid fa-user icon"></i>基本信息</h2>
+            <div class="flex flex-col md:flex-row items-center gap-4">
+                <div class="grid grid-cols-2 gap-4 w-full">
+                    <div>
+                        <label for="name">姓名</label>
+                        <input type="text" id="name" placeholder="text" maxlength="20">
+                    </div>
+                    <div>
+                        <label for="gender">性别</label>
+                        <select id="gender">
+                            <option value="male">男</option>
+                            <option value="female">女</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="age">年龄</label>
+                        <input type="number" id="age" placeholder="number" min="1" max="120">
+                    </div>
+                    <div>
+                        <label for="hometown">籍贯</label>
+                        <input type="text" id="hometown" placeholder="text" maxlength="50">
+                    </div>
+                    <div>
+                        <label for="phone">联系电话</label>
+                        <input type="tel" id="phone" placeholder="telephone" maxlength="15">
+                    </div>
+                    <div>
+                        <label for="email">电子邮箱</label>
+                        <input type="email" id="email" placeholder="email" maxlength="50">
+                    </div>
+                </div>
+                <img src="3.jpg" alt="个人照片" class="photo">
+            </div>
+        </div>
+        <!-- 教育与健康信息 -->
+        <div class="card">
+            <h2><i class="fa-solid fa-graduation-cap icon"></i>教育与健康信息</h2>
+            <div class="grid grid-cols-3 gap-4">
+                <div>
+                    <label for="education">学历</label>
+                    <select id="education">
+                        <option value="primary">小学</option>
+                        <option value="junior">初中</option>
+                        <option value="senior">高中</option>
+                        <option value="college">大专</option>
+                        <option value="bachelor">本科</option>
+                        <option value="master">硕士</option>
+                        <option value="doctor">博士</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="health">健康状况</label>
+                    <select id="health">
+                        <option value="good">良好</option>
+                        <option value="normal">一般</option>
+                        <option value="poor">较差</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="marital">婚姻状况</label>
+                    <select id="marital">
+                        <option value="single">未婚</option>
+                        <option value="married">已婚</option>
+                        <option value="divorced">离异</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <!-- 求职与专业信息 -->
+        <div class="card">
+            <h2><i class="fa-solid fa-briefcase icon"></i>求职与专业信息</h2>
+            <div class="grid grid-cols-3 gap-4">
+                <div>
+                    <label for="job-intention">求职意向</label>
+                    <select id="job-intention" multiple>
+                        <option value="programmer">程序员</option>
+                        <option value="designer">设计师</option>
+                        <option value="marketing">软件工程师</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="major">专业</label>
+                    <select id="major">
+                        <option value="computer">软件工程</option>
+                        <option value="art">计算机科学与技术</option>
+                        <option value="business">人工智能</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="university">毕业院校</label>
+                    <select id="university">
+                        <option value="university1">信息与电气工程</option>
+                        <option value="university2">人工智能</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <!-- 技能证书 -->
+        <div class="card">
+            <h2><i class="fa-solid fa-certificate icon"></i>技能证书</h2>
+            <div>
+                <input type="checkbox" id="cert1" name="cert1">
+                <label for="cert1">计算机2级</label><br>
+                <input type="checkbox" id="cert2" name="cert2">
+                <label for="cert2">英语四级</label><br>
+                <input type="checkbox" id="cert3" name="cert3">
+                <label for="cert3">教师资格证</label><br>
+            	<input type="checkbox" id="cert4" name="cert4">
+            	<label for="cert4">其他</label>
+            </div>
+        </div>
+        <!-- 个人特长与爱好 -->
+        <div class="card">
+            <h2><i class="fa-solid fa-star icon"></i>个人特长与爱好</h2>
+            <div>
+                <input type="checkbox" id="hobby1" name="hobby1">
+                <label for="hobby1">运动</label><br>
+                <input type="checkbox" id="hobby2" name="hobby2">
+                 <label for="hobby1">绘画</label><br>
+                <input type="checkbox" id="hobby3" name="hobby3">
+                <label for="hobby3">歌舞</label><br>
+            	<input type="checkbox" id="hobby4" name="hobby4">
+            	<label for="hobby4">其他</label>
+            </div>
+        </div>
+        <!-- 项目经历与自我评价 -->
+        <div class="card">
+            <h2><i class="fa-solid fa-project-diagram icon"></i>项目经历与自我评价</h2>
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <label for="project-experience">项目经历</label>
+                    <textarea id="project-experience" rows="5"></textarea>
+                </div>
+                <div>
+                    <label for="self-evaluation">自我评价</label>
+                    <textarea id="self-evaluation" rows="5"></textarea>
+                </div>
+            </div>
+        </div>
+        <!-- 提交和重置按钮 -->
+        <div class="flex justify-center">
+            <button type="submit" class="mr-4">提交</button>
+            <button type="reset">重置</button>
+        </div>
+    </div>
+</body>
+
+</html>    
